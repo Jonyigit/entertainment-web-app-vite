@@ -63,3 +63,20 @@
         opacity: 1;
     }
 }
+
+@media (max-width: 650px) {
+    .skeleton-slider-card {
+        min-width: 240px;
+        height: 140px;
+    }
+    .skelton-movie-info {
+        .movie-content {
+            ul {
+                li {
+                    width: 40px;
+                    background: #cccccc;
+                }
+            }
+        }
+    }
+}

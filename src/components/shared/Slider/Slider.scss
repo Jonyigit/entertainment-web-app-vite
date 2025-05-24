@@ -4,42 +4,59 @@
     align-items: start;
     gap: 25px;
     margin-bottom: 40px;
+
     h1 {
         font-weight: 300;
         font-size: 32px;
         letter-spacing: -0.5px;
         color: #ffffff;
     }
+
+    .swiper {
+        width: 100%;
+    }
+
+    .swiper-slide {
+        width: 470px;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none !important;
+    }
+
     .carrousel {
         display: flex;
+        gap: 24px;
         overflow-x: auto;
-        overflow-y: hidden;
-        gap: 40px;
-        width: 100%;
-        padding-right: 65px;
-        overscroll-behavior-x: contain;
         scroll-snap-type: x mandatory;
-        scrollbar-width: none;
+        padding-bottom: 24px;
     }
 }
 
 @media (max-width: 1400px) {
     .slider-container {
         padding: 0px 25px;
-        .carrousel {
-            padding: 0px 0px 0px 0px;
-        }
     }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 650px) {
     .slider-container {
+        padding: 0px 16px;
+        gap: 0px;
+        margin-bottom: 25px;
+
         h1 {
             font-size: 20px;
             margin-bottom: 16px;
         }
-        padding: 0px 16px;
-        gap: 0px;
-        margin-bottom: 25px;
+
+        .swiper-slide {
+            width: 240px;
+            height: 140px;
+        }
     }
 }
