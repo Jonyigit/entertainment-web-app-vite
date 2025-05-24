@@ -1,0 +1,60 @@
+.tvseries {
+    .title {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        h1 {
+            margin-bottom: 38px;
+            font-weight: 400;
+            font-size: 32px;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+        }
+        .none {
+            display: none;
+        }
+    }
+    .noResults {
+        font-weight: 400;
+        font-size: 32px;
+        letter-spacing: -0.5px;
+        color: #ffffff;
+    }
+    .tvseries-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        grid-column-gap: 40px;
+        grid-row-gap: 32px;
+    }
+}
+
+@media (max-width: 900px) {
+    .tvseries {
+        padding: 0px 25px;
+        .tvseries-cards {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-column-gap: 30px;
+            grid-row-gap: 24px;
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .tvseries {
+        padding: 0px 16px;
+        .title {
+            h1 {
+                font-size: 20px;
+                margin-bottom: 16px;
+            }
+        }
+        .noResults {
+            font-size: 20px;
+        }
+        .tvseries-cards {
+            grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+            grid-column-gap: 15px;
+            grid-row-gap: 16px;
+        }
+    }
+}

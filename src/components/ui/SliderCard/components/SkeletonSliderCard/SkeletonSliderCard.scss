@@ -1,0 +1,65 @@
+.skeleton-slider-card {
+    animation: pulse 1.5s infinite;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    min-width: 470px;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+}
+
+.skeleton-bg {
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    position: absolute;
+}
+
+.skelton-movie-info {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    width: 100%;
+    .movie-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        ul {
+            display: flex;
+            width: 100%;
+            gap: 10px;
+            li {
+                width: 80px;
+                background: #cccccc;
+            }
+        }
+    }
+}
+
+.skeleton-text {
+    border-radius: 4px;
+    margin: 4px 0;
+    display: flex;
+}
+
+.skeleton-text.long {
+    width: 80%;
+    height: 14px;
+    margin-top: 6px;
+    background: #cccccc;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+}

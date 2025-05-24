@@ -1,0 +1,181 @@
+.bookmark {
+    .searchResults {
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 38px;
+        .title {
+            h1 {
+                font-weight: 400;
+                font-size: 32px;
+                letter-spacing: -0.5px;
+                color: #ffffff;
+            }
+            .none {
+                display: none;
+            }
+        }
+        .noResults {
+            font-weight: 400;
+            font-size: 32px;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            width: 100%;
+            position: absolute;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-column-gap: 40px;
+            grid-row-gap: 32px;
+            position: relative;
+        }
+    }
+    .moviesbook {
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 38px;
+        .title {
+            h1 {
+                font-weight: 400;
+                font-size: 32px;
+                letter-spacing: -0.5px;
+                color: #ffffff;
+            }
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-column-gap: 40px;
+            grid-row-gap: 32px;
+            position: relative;
+            .card-empty {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 15px;
+                img {
+                    width: 250px;
+                }
+                h1 {
+                    font-size: 20px;
+                    font-weight: 400;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .seriesbook {
+        display: flex;
+        flex-direction: column;
+        gap: 38px;
+        .title {
+            h1 {
+                font-weight: 400;
+                font-size: 32px;
+                letter-spacing: -0.5px;
+                color: #ffffff;
+            }
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-column-gap: 40px;
+            grid-row-gap: 32px;
+            position: relative;
+            .card-empty {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 15px;
+                img {
+                    width: 250px;
+                }
+                h1 {
+                    font-size: 20px;
+                    font-weight: 400;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .bookmark {
+        padding: 0px 25px;
+        .searchResults {
+            .cards {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-column-gap: 30px;
+                grid-row-gap: 24px;
+            }
+        }
+        .moviesbook {
+            .cards {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-column-gap: 30px;
+                grid-row-gap: 24px;
+            }
+        }
+        .seriesbook {
+            .cards {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-column-gap: 30px;
+                grid-row-gap: 24px;
+            }
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .bookmark {
+        padding: 0px 16px;
+        .seriesbook {
+            gap: 16px;
+            .title {
+                h1 {
+                    font-size: 20px;
+                }
+            }
+            .cards {
+                grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+                grid-column-gap: 15px;
+                grid-row-gap: 16px;
+            }
+        }
+        .moviesbook {
+            gap: 16px;
+            .title {
+                h1 {
+                    font-size: 20px;
+                }
+            }
+
+            .cards {
+                grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+                grid-column-gap: 15px;
+                grid-row-gap: 16px;
+            }
+        }
+        .searchResults {
+            gap: 16px;
+            .title {
+                h1 {
+                    font-size: 20px;
+                }
+            }
+            .noResults {
+                font-size: 20px;
+            }
+            .cards {
+                grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+                grid-column-gap: 15px;
+                grid-row-gap: 16px;
+            }
+        }
+    }
+}

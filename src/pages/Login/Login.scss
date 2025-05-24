@@ -1,0 +1,114 @@
+:root {
+    --bg: #10141e;
+    --btn-bg: #fc4747;
+    --white: #ffffff;
+    --card-bg: #161d2f;
+}
+
+@mixin flex-utils($JustifyProd, $AlignProd) {
+    display: flex;
+    justify-content: $JustifyProd;
+    align-items: $AlignProd;
+}
+
+.errorModal {
+    color: var(--white);
+    background: var(--btn-bg);
+    width: 240px;
+    height: 35px;
+    @include flex-utils(center, center);
+    border-radius: 4px;
+    position: absolute;
+    left: 20px;
+    top: 40px;
+}
+
+.login-page {
+    background: var(--bg);
+    width: 100%;
+    min-height: 100vh;
+    @include flex-utils(center, center);
+    flex-direction: column;
+    gap: 82.99px;
+    .login {
+        max-width: 400px;
+        width: 100%;
+        height: 373px;
+        border-radius: 20px;
+        background: var(--card-bg);
+        padding: 32px;
+        .title {
+            color: var(--white);
+            font-weight: 400;
+            font-size: 32px;
+            letter-spacing: -0.5px;
+            margin-bottom: 40px;
+        }
+        .inputs {
+            @include flex-utils(start, center);
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 40px;
+            .label {
+                width: 100%;
+                position: relative;
+                input {
+                    width: 100%;
+                    border: none;
+                    border-bottom: 1px solid #5a698f;
+                    padding: 0px 16px;
+                    height: 37px;
+                    outline: none;
+                    font-family: inherit;
+                    font-weight: 400;
+                    font-size: 15px;
+                    caret-color: var(--btn-bg);
+                    color: var(--white);
+                    background: inherit;
+
+                    &:focus {
+                        border-bottom: 1px solid var(--white);
+                    }
+                    &.error {
+                        border-bottom: 1px solid var(--btn-bg);
+                    }
+
+                    &:not(.error):focus {
+                        border-bottom: 1px solid var(--white);
+                    }
+                }
+
+                .errorMessage {
+                    color: var(--btn-bg);
+                    font-weight: 400;
+                    font-size: 13px;
+                    position: absolute;
+                    transform: translate(-170px, 0px);
+                    width: 50%;
+                    text-align: end;
+                }
+            }
+        }
+
+        .login-footer {
+            @include flex-utils(center, center);
+            gap: 9px;
+            span {
+                font-weight: 400;
+                font-size: 15px;
+                color: var(--white);
+            }
+            a {
+                font-weight: 400;
+                font-size: 15px;
+                color: #fc4747;
+            }
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .login-page {
+        padding: 0px 16px;
+    }
+}

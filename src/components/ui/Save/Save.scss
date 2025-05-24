@@ -1,0 +1,64 @@
+.save-cirlce {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background: #10141e75;
+    position: absolute;
+    right: 24px;
+    top: 16px;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.5s ease;
+    svg {
+        transition: all 0.5s ease;
+    }
+}
+
+.save-cirlce:hover {
+    background: #fff;
+    svg {
+        path {
+            stroke: #10141e;
+        }
+    }
+}
+
+.save-active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background: #10141e75;
+    position: absolute;
+    right: 24px;
+    top: 16px;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.5s ease;
+    svg {
+        fill: #ffffff;
+    }
+}
+
+.save-active:hover {
+    background: #10141e;
+    svg {
+        fill: #fff;
+    }
+}
+
+@media (max-width: 760px) {
+    .save-cirlce {
+        right: 10px;
+        top: 10px;
+    }
+    .save-active {
+        right: 10px;
+        top: 10px;
+    }
+}

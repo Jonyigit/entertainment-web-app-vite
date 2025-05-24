@@ -1,0 +1,122 @@
+.card {
+    min-width: 470px;
+    height: 230px;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    align-items: end;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .bg {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: #00000080;
+        width: 100%;
+        height: 0%;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease;
+        .play-box {
+            max-width: 117px;
+            width: 100%;
+            height: 48px;
+            border-radius: 28.5px;
+            background: #ffffff88;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 19px;
+            padding: 9px;
+            cursor: pointer;
+            img {
+                width: 30px;
+                height: 30px;
+                margin-bottom: 0px;
+            }
+            span {
+                font-weight: 400;
+                font-size: 18px;
+                color: #ffffff;
+            }
+        }
+    }
+    .movie-info {
+        padding: 24px;
+        z-index: 1;
+        .movie-content {
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 20px;
+            .year {
+                font-weight: 400;
+                font-size: 15px;
+                color: #ffffff;
+                opacity: 75%;
+            }
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                list-style-type: disc;
+                gap: 20px;
+                li::marker {
+                    font-size: 12px;
+                }
+                li {
+                    font-weight: 400;
+                    font-size: 15px;
+                    color: #ffffff;
+                    opacity: 75%;
+                    svg {
+                        margin-right: 6px;
+                    }
+                }
+            }
+        }
+        .cinema-name {
+            font-weight: 400;
+            font-size: 24px;
+            color: #ffffff;
+        }
+    }
+}
+
+.card:hover .bg {
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 760px) {
+    .card {
+        min-width: 240px;
+        height: 140px;
+        .bg {
+            display: none;
+        }
+        .movie-info {
+            padding: 16px;
+            .movie-content {
+                .year {
+                    font-size: 12px;
+                }
+                ul {
+                    li {
+                        font-size: 12px;
+                    }
+                }
+            }
+            .cinema-name {
+                font-size: 15px;
+            }
+        }
+    }
+}
