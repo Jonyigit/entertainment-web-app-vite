@@ -39,7 +39,7 @@ function Aside() {
     return (
         <motion.aside className="aside" variants={asideVariants} initial="hidden" animate="visible">
             <div className="container">
-                <Link to="/">
+                <Link to="/trending">
                     <img src={movieIcon} alt="no foto" className="logo" />
                 </Link>
 

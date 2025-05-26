@@ -35,16 +35,34 @@ export default function Login() {
             localStorage.setItem("token", token);
 
             reset();
-            navigate("/", { replace: true });
+            navigate("/trending", { replace: true });
         } catch (err) {
             if (axios.isAxiosError(err)) {
                 if (err.response?.status === 401) {
-                    toast.error("Email yoki parol noto'g'ri!");
+                    toast.error("Email yoki parol noto'g'ri!", {
+                        style: {
+                            background: "#10141e",
+                            color: "white",
+                            border: "1px solid red",
+                        },
+                    });
                 } else {
-                    toast.error("Tizimda xatolik. Iltimos, qayta urinib ko'ring.");
+                    toast.error("Tizimda xatolik. Iltimos, qayta urinib ko'ring.", {
+                        style: {
+                            background: "#10141e",
+                            color: "white",
+                            border: "1px solid red",
+                        },
+                    });
                 }
             } else {
-                toast.error("Kutilmagan xatolik yuz berdi.");
+                toast.error("Kutilmagan xatolik yuz berdi.", {
+                    style: {
+                        background: "#10141e",
+                        color: "white",
+                        border: "1px solid red",
+                    },
+                });
             }
         } finally {
             setLoading(false);

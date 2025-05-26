@@ -11,7 +11,7 @@ import { useEffect } from "react";
 
 function BookMark() {
     useEffect(() => {
-        document.title = "Bookmark | Intertainment Web App | Jonyigit-Web";
+        document.title = "Bookmark | Intertainment | Jonyigit-Web";
     }, []);
     const { searchQuery } = useOutletContext();
 

@@ -7,7 +7,7 @@ import { useEffect } from "react";
 
 function Cinema({ searchQuery }) {
     useEffect(() => {
-        document.title = "Home | Intertainment Web App | Jonyigit-Web";
+        document.title = "Home | Intertainment | Jonyigit-Web";
     }, []);
 
     const { data, isPending } = useQuery({

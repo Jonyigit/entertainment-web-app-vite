@@ -10,7 +10,7 @@ import { useEffect } from "react";
 
 function Movies() {
     useEffect(() => {
-        document.title = "Movies | Intertainment Web App | Jonyigit-Web";
+        document.title = "Movies | Intertainment | Jonyigit-Web";
     }, []);
 
     const { searchQuery } = useOutletContext();
